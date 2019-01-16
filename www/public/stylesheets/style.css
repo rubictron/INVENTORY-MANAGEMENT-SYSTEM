@@ -1,0 +1,116 @@
+/*body {*/
+  /*padding: 50px;*/
+  /*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+/*}*/
+
+/*a {*/
+  /*color: #00B7FF;*/
+/*}*/
+
+
+header{
+  background-color: #0056b3;
+}
+
+#bgimage{
+  background-size: cover;
+  min-height: 100%;
+}
+
+body{
+  height: 100%;
+}
+
+html{
+  background-color:#0056b3 ;
+  height: 100%;
+}
+
+main{
+  background-color: #80bdff;
+  height: 90%;
+  padding: 50px;
+}
+
+.btn{
+  /*width: 100px;*/
+  margin: 5px;
+}
+
+
+.registor{
+  display: none;
+}
+
+footer{
+  height: 10%;
+  background-color: #1b1e21;
+  margin: 0 -15px 0 -15px;
+  color: white;
+}
+
+footer div{
+
+  font-size: 12px;
+  margin: 0 50px 0 50px;
+}
+
+
+@media all and (min-width: 992px) {
+
+  .btngrup{
+
+    text-align: right;
+
+  }
+
+}
+
+
+
+
+.notice p {
+
+  color: white;
+  font-size: 12px;
+}
+
+.notice {
+  width: 100%;
+  color: white;
+  font-size: 14px;
+}
+
+#noticeboard h6 {
+  color: red;
+  padding: 0 0 0 0;
+}
+
+.notice div {
+  padding: 10px;
+  border: thick double grey;
+}
+
+li div p {
+  font-size: 14px;
+}
+
+li div a {
+  font-size: 14px;
+  color: orangered;
+}
+
+
+@media all and (max-width: 768px) {
+
+  /*.btn{*/
+
+    /*width: 100%;*/
+
+  /*}*/
+
+  #bgimage{
+    display: none;
+  }
+
+}

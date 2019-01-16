@@ -1,0 +1,505 @@
+<div class="col-lg-12">
+    <div class="card">
+        <div id="insertItemHeader" class="card-header">
+            <strong class="card-title">Insert New Item</strong>
+        </div>
+        <div id="insertItems" class="card-body card-block">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <form action="/lab/additem" method="post" class="">
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="inventoryNo">Inventory No</label>
+                                <input type="text" class="form-control" id="inventoryNo" name="inventoryNo"
+                                       value={{maxid}}   readonly>
+                            </div>
+                            <div style="display: none" class="form-group col-md-1">
+                                <label for="inventoryNo">Laborotory</label>
+                                <input type="text" class="form-control" id="inventoryNo" name="labNo"
+                                       value={{labNo}} readonly>
+                            </div>
+                            <div class="form-group col-md-7">
+                                <label for="inventoryType">Inventory Type</label>
+                                <select id="inventoryType" name="inventoryType" class="form-control" required>
+                                    <option></option>
+                                    {{#each innstrumentType}}
+                                        <option value={{typeId}}>{{name}}</option>
+                                    {{/each}}
+
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save</button>
+
+
+                    </form>
+
+                </div>
+                <div class="col-md-6">
+                    <form action="/lab/addItemType" method="post" class="">
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="inventoryTypeNo">Inventory type id</label>
+                                <input type="text" class="form-control" id="inventoryTypeNo" value='{{maxid_t}}'
+                                       name="inventoryTypeNo" readonly>
+                            </div>
+                            <div style="display: none" class="form-group col-md-1">
+                                <label for="inventoryNo">Laborotory</label>
+                                <input type="text" class="form-control" id="inventoryNo" name="labNo"
+                                       value={{labNo}} readonly>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inventoryType">Inventory type</label>
+                                <input type="text" class="form-control" id="inventoryType" name="inventoryType">
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div id="orderformHeader" class="card-header">
+            <strong class="card-title">Make your order here</strong>
+        </div>
+        <div id="orderform" class="card-body">
+            <!-- Credit Card -->
+            <div id="pay-invoice">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="text-center">Order Form</h3>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <form class="col-md-7" action="" method="post" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="form-group col-md-8">
+                                    <label for="insName1" class="control-label mb-1">instrument name</label>
+                                    <select id="insName1" name="insName1" class="form-control" required>
+                                        <option selected></option>
+                                        {{#each innstrumentType}}
+                                            <option value='{{name}}'>{{name}}</option>
+                                        {{/each}}
+
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="insq1" class="control-label mb-1">Quentity</label>
+                                    <select id="insq1" name="insq1" class="form-control" required>
+                                        <option></option>
+                                    </select>
+                                </div>
+
+
+                            </div>
+                            <div style="text-align: right">
+                                <button id="btnAdd1" type="reset" class="btn btn-primary">Add or Save</button>
+                                <button id="btnDelete1" type="button" class="btn btn-danger">Remove</button>
+                            </div>
+
+
+                        </form>
+                        <div class="col-md-5">
+                            <table id="tableOrder1" class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Inventory name</th>
+                                    <th>quentity</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="form-group col-md-9">
+                                    <label for="cc-payment" class="control-label mb-1">User name</label>
+                                    <select id="username1" name="username1" class="form-control" required>
+                                        {{#each usernames}}
+                                            <option value="{{username}}">{{username}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="btn1Submit" class="control-label mb-1"></label>
+                                    <button id="btn1Submit" type="button" class="btn btn-success">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div id="insertPracticalHeader" class="card-header">
+            <strong class="card-title">Add practical from here</strong>
+        </div>
+        <div id="insertPractical" class="card-body">
+            <!-- Credit Card -->
+            <div id="pay-invoice">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="text-center">Add Practical</h3>
+                    </div>
+                    <hr>
+                    <form action=""  class="">
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <label for="inventoryType">Practical No</label>
+                                <input type="text" class="form-control" id="pNo" name="pNo">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inventoryType">Module</label>
+                                <input type="text" class="form-control" id="module" name="module">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inventoryType">Name</label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+
+
+                        </div>
+                    </form>
+
+                    <div class="row">
+                        <form class="col-md-7" action="" method="post" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="form-group col-md-8">
+                                    <label for="insName" class="control-label mb-1">instrument name</label>
+                                    <select id="insName" name="insName" class="form-control" required>
+                                        <option selected></option>
+                                        {{#each innstrumentType}}
+                                            <option value='{{name}}'>{{name}}</option>
+                                        {{/each}}
+
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="insq" class="control-label mb-1">Quentity</label>
+                                    <select id="insq" name="insq" class="form-control" required>
+                                        <option></option>
+                                    </select>
+                                </div>
+
+
+                            </div>
+                            <div style="text-align: right">
+                                <button id="btnAdd" type="reset" class="btn btn-primary">Add or Save</button>
+                                <button id="btnDelete" type="button" class="btn btn-danger">Remove</button>
+                            </div>
+
+
+                        </form>
+                        <div class="col-md-5">
+                            <table id="tableOrder" class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Inventory name</th>
+                                    <th>quentity</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="form-group col-md-9">
+                                    <label for="username" class="control-label mb-1">User name</label>
+                                    <select id="username" name="username" class="form-control" required>
+                                        {{#each usernames}}
+                                            <option value="{{username}}">{{username}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="btnSubmit" class="control-label mb-1"></label>
+                                    <button id="btnSubmit" type="button" class="btn btn-success">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+
+        $('#btnAdd1').click(function () {
+            if (!$('#insName1').val() == "" && !$('#insq1').val() == "") {
+
+                var val = $('#insName1').val();
+                console.log(val);
+                // $('#'+val).remove();
+                $('#tableOrder1').append(
+                        '<tr id=' + val + ' class="table-primary">' +
+                        '<td>' + val + '</td>' +
+                        '<td>'+$('#insq1').val()+'</td> ' +
+                        '       </tr>'
+                );
+
+            }
+
+        });
+
+
+        $('#btnAdd').click(function () {
+            if (!$('#insName').val() == "" && !$('#insq').val() == "") {
+
+                var val = $('#insName').val();
+
+                $('#tableOrder').append(
+                        '<tr id=' + val + ' class="table-primary">' +
+                        '<td>' + val + '</td>' +
+                        '<td>'+$('#insq').val()+'</td> ' +
+                        '       </tr>'
+                );
+
+            }
+
+        });
+
+
+        $('#btnDelete').click(function () {
+
+            var val = $('#insName').val();
+            $('#' + val).remove();
+
+        });
+
+
+        $('#btnDelete1').click(function () {
+
+            var val = $('#insName1').val();
+            $('#' + val).remove();
+
+        });
+
+
+    </script>
+
+
+    <div class="content mt-3">
+        <div class="animated fadeIn">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Data Table</strong>
+                        </div>
+                        <div class="card-body">
+                            <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>inventoryNo</th>
+                                    <th>availability</th>
+                                    <th>name</th>
+                                    <th>Details</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#each results}}
+                                    <tr class="table-primary">
+                                        <td>{{inventoryNo}}</td>
+                                        <td>{{availability}}</td>
+                                        <td>{{name}}</td>
+                                        <td><a href="/inventory?inventoryNo={{inventoryNo}}">
+                                            <button class="btn btn-sm btn-success">Details</button>
+                                        </a></td>
+                                    </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $("#tableOrder1 tbody").on("click", "tr", function (e) {
+            var val = $(e.currentTarget).find('td:first').text();
+            $('#insName1').val(val);
+
+        });
+
+        $("#tableOrder tbody").on("click", "tr", function (e) {
+            var val = $(e.currentTarget).find('td:first').text();
+            $('#insName').val(val);
+
+        });
+
+
+        $('#insq').focusin(function () {
+            setq('insName', 'insq');
+        });
+        $('#insq1').focusin(function () {
+            setq('insName1', 'insq1');
+        });
+
+
+        function setq(str1, str2) {
+
+            var ins = $('#' + str2 + ' option');
+            var inso = $('#' + str2);
+
+            $.ajax({
+
+                method: 'POST',
+                url: '/inventory/getq',
+                aysnc: true,
+                data: {quentity: $('#' + str1).val(), labNo: '{{labNo}}'}
+            }).done(function (response) {
+                console.log(response[0].q);
+                ins.remove();
+
+                for (var i = 0; i < response[0].q + 1; i++) {
+
+                    inso.append(
+                            '<option>' + i + '</option>'
+                    );
+
+
+                }
+            });
+        }
+
+
+        var x = document.getElementById("insertItems");
+        x.style.display = "none";
+        $('#insertItemHeader').click(function () {
+
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+        });
+
+        var z = document.getElementById("insertPractical");
+        z.style.display = "none";
+        $('#insertPracticalHeader').click(function () {
+
+
+            if (z.style.display === "none") {
+                z.style.display = "block";
+            } else {
+                z.style.display = "none";
+            }
+
+        });
+
+        var y = document.getElementById("orderform");
+        y.style.display = "none";
+        $('#orderformHeader').click(function () {
+
+
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+
+        });
+
+
+        $('#btnSubmit').click(function () {
+
+            console.log('aaaaaaa');
+
+            var json = '[';
+            var otArr = [];
+            var tbl2 = $('#tableOrder tbody tr').each(function (i) {
+                x = $(this).children();
+                var itArr = [];
+                x.each(function () {
+                    itArr.push('"' + $(this).text() + '"');
+                });
+                otArr.push('[' + itArr.join(',') + ']');
+            })
+            json += otArr.join(",") + ']';
+
+            console.log(json);
+
+
+            $.ajax({
+
+                method: 'POST',
+                url: '/practical/addPractical',
+                aysnc: true,
+                data: {json: json,
+                    user_b: $('#username').val(),
+                    pNo:$('#pNo').val(),
+                    module:$('#module').val(),
+                    name:$('#name').val(),
+                    labNo:'lab3'
+                }
+            }).done(function (response) {
+
+                window.location.replace("/");
+            });
+
+        });
+
+
+
+
+        $('#btn1Submit').click(function () {
+
+            var json = '[';
+            var otArr = [];
+            var tbl2 = $('#tableOrder1 tbody tr').each(function (i) {
+                x = $(this).children();
+                var itArr = [];
+                x.each(function () {
+                    itArr.push('"' + $(this).text() + '"');
+                });
+                otArr.push('[' + itArr.join(',') + ']');
+            })
+            json += otArr.join(",") + ']';
+
+            console.log(json);
+
+
+            $.ajax({
+
+                method: 'POST',
+                url: '/inventory/order',
+                aysnc: true,
+                data: {json: json, user_b: $('#username1').val()}
+            }).done(function (response) {
+
+                window.location.replace("/");
+            });
+
+        });
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+

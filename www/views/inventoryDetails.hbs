@@ -1,0 +1,71 @@
+
+
+<div class="col-lg-12">
+    <div class="card">
+        <div id="insertItemHeader"  class="card-header">Add details Here</div>
+    </div>
+    <div id="insertItem" class="card-body card-block">
+        <form action="inventory/addDetail" method="post" class="">
+            <div class="form-group">
+                <label for="detail">Add defects, damages and repairs  of items</label>
+                <textarea class="form-control" id="detail" name="detail" rows="3" required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Save</button>
+            <a href="/lab?lab={{labNo}}"> <button class="btn btn-primary" type="button">Finish</button></form>
+
+        </form>
+    </div>
+
+</div>
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">Data Table</strong>
+                    </div>
+                    <div class="card-body">
+                        <table id="bootstrap-data-table" class="table table-striped table-bordered">
+                            <thead >
+                            <tr >
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>content</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each results2}}
+                                <tr class="table-primary">
+                                    <td>{{d}}-{{m}}-{{yr}}</td>
+                                    <td>{{t}}</td>
+                                    <td>{{content}}</td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var x = document.getElementById("insertItem");
+    // x.style.display = "none";
+    $('#insertItemHeader').click(function () {
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+    });
+
+</script>

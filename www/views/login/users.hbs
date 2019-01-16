@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+<body>
+<!-- Content-->
+<div class="content" class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Level</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each user}}
+            <tr class="table-primary">
+                <td scope="row">{{username}}</td>
+                <td>{{email}}</td>
+                <td>{{role}}</td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-4"></div>
+
+
+</div>
+
+</body>
+

@@ -1,0 +1,76 @@
+<body class="container">
+<header class="row">
+    <div>
+
+    </div>
+</header>
+<main class="row">
+
+    <div id="bgimage" class="col-md-6" style="background-image: url('/images/bg-01.jpg');">
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="entry">
+            {{#if author}}
+                <h1>{{firstName}} {{lastName}}</h1>
+            {{/if}}
+        </div>
+
+
+        <div style="height: 100px">
+        {{#if msg}}
+            <div class="alert alert-danger" role="alert">
+                {{msg}}
+            </div>
+        {{/if}}
+        </div>
+        <form  id="formlogin" action="logincontroller" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="form-group">
+                <label for="username" >Username</label>
+                <div >
+                    <input type="text" class="form-control form-control-sm" id="username" name="username"
+                           placeholder="enter valid username" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div>
+                    <input type="password" class="form-control" id="password" name="password"
+                           placeholder="Password" required>
+                </div>
+            </div>
+
+            <div class="btngrup">
+                <a href="/register" > <button class="btn btn-sm btn-primary" id="btnopenreg" type="button">Registor</button></a>
+                <button class="btn btn-sm btn-success" id="btnlog" type="submit">Sign in</button>
+            </div>
+        </form>
+    </div>
+
+
+</main>
+<footer id="footer">
+
+    <!--<div> <i class="fa fa-copyright" aria-hidden="true"></i>&nbsp CopyRright &nbsp&nbsp Asitha Sandakalum (Rubictron)<br>-->
+        <!--<a href="https://github.com/rubictron?tab=repositories">-->
+            <!--<i class="fab fa-internet-explorer"></i>&nbsp www.asithasandakalum.tk-->
+        <!--</a>&nbsp&nbsp&nbsp&nbsp&nbsp-->
+        <!--<a href="https://rubictronsandakalum.blogspot.com">-->
+            <!--<i class="fab fa-blogger-b"></i>&nbsp www.rubictronsandakalum.blogspot.com-->
+        <!--</a>&nbsp&nbsp&nbsp&nbsp&nbsp-->
+        <!--<a href="https://github.com/rubictron?tab=repositories">-->
+            <!--<i class="fab fa-github-square"></i>&nbsp Git hub(rubictron)-->
+        <!--</a>-->
+    <!--</div>-->
+
+
+    </div>
+
+</footer>
+
+</body>
+
+<script type="text/javascript" src="/javascripts/script.js"></script>

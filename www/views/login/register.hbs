@@ -1,0 +1,88 @@
+<body class="container">
+<header class="row">
+    <div>
+
+    </div>
+</header>
+<main class="row">
+    <div id="bgimage" class="col-md-6" style="background-image: url('/images/bg-01.jpg');">
+
+    </div>
+    <div class="col-md-6">
+        <div style="height: 100px">
+        </div>
+        <form id="formreg" class="needs-validation"  action="register/controller" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="form-group">
+                <label for="username" >Username</label>
+                <div>
+                    <input type="text" class="form-control" id="username" name="username"
+                           placeholder="enter valid username" required>
+                </div>
+            </div>
+            <div class="form-group  ">
+                <label for="emailad">Email</label>
+                <div >
+                    <input type="email" class="form-control" id="emailad" name="emailad"
+                           placeholder="enter valid email" required>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="password" >Password</label>
+                <div>
+                    <input type="password" class="form-control " id="password" name="password"
+                           placeholder="Password" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="cpassword" >Confirm
+                    Password</label>
+                <div >
+                    <input type="password" class="form-control" id="cpassword" name="cpassword"
+                           placeholder="Password" required>
+                </div>
+            </div>
+
+
+
+                <button class="btn btn-sm btn-success" id="btnreg" type="submit">Registor</button>
+            </div>
+        </form>
+        <script>
+
+            $('#btnreg').click(function () {
+
+                if($('#password').val()!==$('#cpassword').val()) {
+                    console.log('aaaa');
+                    alert('Password not match');
+
+                }
+                            });
+
+        </script>
+    </div>
+
+</main>
+
+<footer id="footer">
+
+    <!--<div> <i class="fa fa-copyright" aria-hidden="true"></i>&nbsp CopyRright &nbsp&nbsp Asitha Sandakalum (Rubictron)<br>-->
+        <!--<a href="https://github.com/rubictron?tab=repositories">-->
+            <!--<i class="fab fa-internet-explorer"></i>&nbsp www.asithasandakalum.tk-->
+        <!--</a>&nbsp&nbsp&nbsp&nbsp&nbsp-->
+        <!--<a href="https://rubictronsandakalum.blogspot.com">-->
+            <!--<i class="fab fa-blogger-b"></i>&nbsp www.rubictronsandakalum.blogspot.com-->
+        <!--</a>&nbsp&nbsp&nbsp&nbsp&nbsp-->
+        <!--<a href="https://github.com/rubictron?tab=repositories">-->
+            <!--<i class="fab fa-github-square"></i>&nbsp Git hub(rubictron)-->
+        <!--</a>-->
+    <!--</div>-->
+
+
+    </div>
+
+</footer>
+</body>
+
